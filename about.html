@@ -15,10 +15,12 @@
         }
 
         body {
-            background-image: url("https://img.freepik.com/free-vector/abstract-red-circle-black-background-technology_1142-9928.jpg?w=1060&t=st=1686267354~exp=1686267954~hmac=488b43f31be59da156487a1b97057595da124014ab0898441b8a3655c30bd2d2");
-            background-size: cover;
+            background-image: url("./background.jpg");
             color: white;
             font-family: 'Roboto', Arial, sans-serif;
+            background-attachment: fixed;
+            background-size: cover;
+
         }
 
         h1 {
@@ -30,7 +32,14 @@
         }
 
         #wrapper {
-            background: rgba(255, 255, 255, 0);
+            background: rgba(255, 255, 255, 0.407);
+            margin-right: auto;
+            margin-left: auto;
+            min-width: 900px;
+            max-width: 1280px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         #top {
@@ -78,8 +87,13 @@
         }
 
         #content {
+            flex: 1;
             padding: 20px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         #navigation button {
@@ -117,7 +131,7 @@
             padding: 20px;
             border: 1px solid #E71D36;
             border-radius: 5px;
-            background-color: rgb(0, 0, 0);
+            background-color: rgba(32, 31, 31, 0.777);
         }
 
         .about-me h2 {
@@ -152,7 +166,7 @@
             padding: 20px;
             border: 1px solid #E71D36;
             border-radius: 5px;
-            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.593);
             display: flex;
             /* Add flex display */
             justify-content: center;
@@ -199,6 +213,11 @@
             padding: 20px;
             text-align: center;
             font-size: 14px;
+        }
+
+        #footerimage {
+            background-image: url("https://imgur.com/rilHVxA.png");
+            background-size: cover;
         }
 
         #footer p {
@@ -252,8 +271,6 @@
 
             // Markdown content
             const markdownContent = `
-![GitHub_Stats](https://github-readme-stats.vercel.app/api?username=EkamAujla&show_icons=true&theme=tokyonight&hide=["issues"])
-
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=EkamAujla)
 ### Frameworks and Languages
 [![Node.JS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
@@ -279,7 +296,7 @@
             const markdownHtml = converter.makeHtml(markdownContent);
             document.getElementById('markdownContainer').innerHTML = markdownHtml;
         </script>
-        <img src="https://imgur.com/rilHVxA.png">
+        <div id="footerimage"></div>
         <div id="footer">
             &copy; 2023 EkamAujla. All rights reserved.
             <br>
